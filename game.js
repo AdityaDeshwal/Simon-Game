@@ -17,7 +17,7 @@ function nextSequence(){
 
 // Animation And Sound
 function playSound(colour){
-    var audio=new Audio('sounds/'+colour+'.mp3');
+    var audio=new Audio(colour + '.mp3');
     audio.play();
 }
 function animatePress(currentColour){
@@ -54,7 +54,7 @@ function checkanswer(currentLevel){
     }
     else{
         console.log("wrong");
-        var audio=new Audio('sounds/wrong.mp3');
+        var audio=new Audio('wrong.mp3');
         audio.play();
         $("body").addClass("game-over");
         $("h1").html("Game Over,Press Any Key to Restart");
