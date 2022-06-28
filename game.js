@@ -29,11 +29,13 @@ function animatePress(currentColour){
 /**************************************************** */
 $(".btn").click(function(event){
     // .target.id is used to target the id of an event
-    var userChosenColour=event.target.id;
+    if(level!==0){
+        var userChosenColour=event.target.id;
     playSound(userChosenColour);
     animatePress(userChosenColour);
     userClickedPattern.push(userChosenColour);
     checkanswer(userClickedPattern.length-1);
+    }
 });
 $(document).keypress(function(){
     if(gamePattern.length===0){
